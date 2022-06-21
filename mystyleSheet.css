@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #DFF6FF;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.input-el{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#input-task{
+    flex-grow: 1;
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #47B5FF;
+    background-color: transparent;
+    font-size: 1em;
+    color: white;
+}
+#add-task-button{
+    padding: 10px;
+    border: 2px solid #1363DF;
+    background-color: #47B5FF;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 300ms linear;
+}
+#add-task-button:hover{
+    background-color: #1363DF;
+}
+#add-task-button:active{
+    background-color: #47B5FF;
+}
+#container{
+    background-color: #06283D;
+    /*background-color: #CDF0EA;*/
+    color: white;
+    min-height: 500px;
+    margin: 0 auto;
+    width: 500px;
+    border: 1px solid rgba(185, 185, 185, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+}
+#container>h1{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+.list-items{
+    background-color: #47B5FF;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 0 5px;
+    border-radius: 5px;
+    transition: box-shadow .5s ease;
+}
+.list-items:hover{
+    box-shadow: 0 0 10px 5px inset #1363DF;
+}
+
+.delete-btn{
+    border-radius: 100%;
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+.list-items>span{
+    display: block;
+    flex-grow: 1;
+    padding: 20px;
+}
+input:checked + span{
+    text-decoration: line-through;
+}
+
+@media screen and (max-width: 500px) {
+    .input-el{
+        flex-direction: column;
+    }
+    #input-task{
+        width: 100%;
+    }
+    #add-task-button{
+        width: 100%;
+        padding: 5px 10px;
+    }
+    #container{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 501px) {
+    @media screen and (min-height: 900px) {
+        body{
+            font-size: 1.5em;
+        }
+        #container{
+            max-width: 1000px;
+            width: 70%;
+        }
+        .list-items{
+            padding: 10px 5px;
+            margin: 20px 0;
+        }
+        button{
+            font-size: 1em;
+        }
+        .delete-btn{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
